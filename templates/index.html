@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>IFSP SJC - Ofertas</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
+
+</head>
+<body>
+	<div id="interface">
+<header id="cabecalho">
+<div id=class>
+        <div id=cabecalho>
+            <h1>IFSP SJC - Ofertas</h1>
+            </div>
+            <div id="menu">
+                <a href="index.html">Pagina Inicial</a>
+                <a>Engenharia de Controle e Automação</a>
+                <a>Engenharia Mecânica</a>
+                <a>Técnico</a>
+                <a>Sobre</a>
+            </div>
+        </div>
+</header>
+
+<header id="cabecalho">	
+	<hgroup>	
+		<h3>
+			IFSP SJC - Ofertas &nbsp; > &nbsp <a href="index.html">Pagina Inicial</a>
+		</h3>
+	</hgroup>
+</header>
+	<section id="produtos">
+
+				<div class="linha1">
+
+					<div class="itens">
+						<figure>
+							<img class="fotos"; id="foto1"; src="{{ url_for('static', filename='_imagens/eca1.png') }}" style="width:200px"/>
+							<figcaption id="foto-legenda"/>				
+							<a href="eca1.html">ECA - Estágio na Embraer</a>
+							<p class="local">Avenida Brigadeiro Faria Lima, 2170</p>
+						</figure>
+					</div>
+					<div class="itens">
+						<figure>
+							<img id="foto2"; src="{{ url_for('static', filename='_imagens/emec1.png') }}"; style="width:200px"/>
+							<figcaption id="foto-legenda"/>
+							<a>EMEC - Engenheiro Mecânico</a>
+							<p class="local">Avenida Mario Firggi, 697</p>
+						</figure>
+					</div>
+					
+					<div class="itens">
+						<figure>
+							<img id="foto3"; src="{{ url_for('static', filename='_imagens/tec1.png') }}" style="width:200px"/>
+							<figcaption id="foto-legenda"/>				
+							<a>Estágio Técnico em Automação</a>
+							<p class="preco">Avenida dos Astronautas, 1311</p>					
+						</figure>
+					</div>
+				</div>
+		</section>
+		
+		</section>
+
+		<footer id="rodape">
+
+		</footer>
+	</body>
+</html>

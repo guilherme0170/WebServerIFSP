@@ -1,0 +1,10 @@
+<table border = 2>
+  {% for user in userDetails %}
+  <tr>
+    {%print(user)%}
+    {%%}
+    <td>{{user[0]}}</td>
+    <td>{{user[1]}}</td>
+  </tr>
+  {% endfor %}
+</table>
