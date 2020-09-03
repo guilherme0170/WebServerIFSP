@@ -11,8 +11,10 @@ Esse projeto tem como objetivo a criação de um Webserver para o IFSP de São J
 
 Arquitetura do Projeto
 ----------------------
-Para a estruturação desse projeto, escolhemos como pilar principal a utilização do Flask, que é uma biblioteca Python que dá uma ótima estrutura para criação de sites. O Banco de Dados escolhido foi o MySQL ue consideramos um banco simples de utilizar e fácil de manejar. Para o FrontEnd, utilizamos o HTML, já o BackEnd ficou todo em Python.
+Para a estruturação desse projeto, escolhemos como pilar principal a utilização do Flask, que é uma biblioteca Python que dá uma ótima estrutura para criação de sites. O Banco de Dados escolhido foi o MySQL ue consideramos um banco simples de utilizar e fácil de manejar. Para o FrontEnd, utilizamos o HTML, CSS e o BootsStrap, já o BackEnd ficou todo em Python/Flask.
+A imagem abaixo representa de maneira mais visual toda a arquitetura planejada do projeto, que será rodada e containerizada em Docker:
 
+<img src="https://cdn.discordapp.com/attachments/744592913685676155/750875829377958018/Arquitetura_Projeto_Prog.png" width="480" height="360">
 
 Requerimentos
 -------------
