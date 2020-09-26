@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>	IFSP SJC - Ofertas > Oferta 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="1.css">
+	
+</head>
+<body onLoad="slide1()">
+	<div id="interface">
+			<header id="cabecalho">		
+        <div id=class>
+        <div id=cabecalho>
+            <h1>IFSP SJC - Ofertas</h1>
+            </div>
+            <div id="menu">
+                <a href="index.html">Página Inicial</a>
+                <a>ECA</a>
+                <a>Engenharia Mecânica</a>
+                <a>Técnicos</a>
+                <a href="criar.html">Criar</a>
+                <a>Sobre</a>
+            </div>
+        </div>
+		</header>
+		<article id="noticia-principal">
+			<header id="cabecalho-artigo">	
+			
+				<hgroup>
+				
+					<h3>
+					IFSP SJC - Ofertas &nbsp; >&nbsp
+					<a href="index.html">Pagina Inicial</a>	&nbsp >		
+					</h3>
+					
+				</hgroup>
+				<h1>Criação de anúncio</h1>
+				
+			<div class="linha1detalhes">	
+			
+				<div class="esquerdaLinha">
+					<img id="logo" alt="Seu logo" width="300" height="300" />
+					<input type="file" onchange="document.getElementById('logo').src = window.URL.createObjectURL(this.files[0])" name="logo" id="logo" accept="image/png, image/jpeg">
+				</div>
+				
+				<div class="direitaLinha"> <label for="titulo">Titulo: </label> <input type="text" id="titulo" name="titulo" size="100"><br><br>
+					<label for="salario1">Salário: R$</label> <input type="text" id="salario1" name="salario1"> até R$<label for="salario2"></label> <input type="text" id="salario2" name="salario2"><br><br>
+					<label for="endereco">Endereço: </label> <input type="text" id="endereco" name="endereco" size="100"><br><br>
+					<label for="descricao">Descrição: </label> <input type="text" id="descricao" name="descricao" size="120"><br><br>
+				</div>
+			</div>	
+			</header>
+            </div>
+		<footer id="rodape">
+
+		</footer>
+	</div>
+</body>
+</html>
