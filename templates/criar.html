@@ -6,7 +6,7 @@
 	<meta charset="UTF-8"/>
 	<title>	IFSP SJC - Ofertas > Criar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="1.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
 	
 </head>
 <body onLoad="slide1()">
@@ -17,10 +17,10 @@
             <h1>IFSP SJC - Ofertas</h1>
             </div>
             <div id="menu">
-                <a href="index.html">Página Inicial</a>
-                <a href="criar.html">Criar</a>
-                <a href="login.html">Login</a>
-		<a href="cadastro.html">Cadastro</a>
+                <a href="/">Página Inicial</a>
+                <a href="criar">Criar</a>
+                <a href="login">Login</a>
+				<a href="cadastro">Cadastro</a>
             </div>
         </div>
 		</header>
@@ -38,6 +38,7 @@
 				<h1>Criação de anúncio</h1>
 				
 			<div class="linha1detalhes">	
+<<<<<<< HEAD
 			
 				<div class="esquerdaLinha">
 					<img id="logo" alt="Seu logo" width="300" height="300" />
@@ -51,6 +52,22 @@
 					<label for="descricao">Descrição: </label><br> <textarea id="descricao" name="descricao" rows="10" cols="70"></textarea><br><br>
 					<input type="submit" value="Enviar">
 				</div>
+=======
+				<form action="/criar" method="POST">
+					<div class="esquerdaLinha">
+						<img id="logo" alt="Seu logo" width="300" height="300" />
+						<input type="file" onchange="document.getElementById('logo').src = window.URL.createObjectURL(this.files[0])" name="logo" id="logo" accept="image/png, image/jpeg">
+					</div>
+					
+					<div class="direitaLinha"> <label for="titulo">Titulo: </label> <input type="text" id="titulo" name="titulo" size="100"><br><br>
+						<label for="salario">Salário: R$</label> <input type="text" id="salario" name="salario"><br><br>
+						<label for="endereco">Endereço: </label> <input type="text" id="endereco" name="endereco" size="100"><br><br>
+						<label for="contato">Contato: </label> <input type="text" id="contato" name="contato" size="100"><br><br>
+						<label for="descricao">Descrição: </label><br> <textarea id="descricao" name="descricao" rows="10" cols="70"></textarea><br><br>
+						<input type="submit" value="Enviar">
+					</div>
+				</form>
+>>>>>>> 9c41cd0... cadastro e lista de projetos
 			</div>	
 			</header>
             </div>

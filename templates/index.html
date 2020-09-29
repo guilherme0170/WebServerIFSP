@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>IFSP SJC - Ofertas</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='_css/estilo.css') }}">
 
 </head>
 <body>
@@ -16,10 +16,10 @@
             <h1>IFSP SJC - Ofertas</h1>
             </div>
             <div id="menu">
-                <a href="index.html">Página Inicial</a>
-                <a href="criar.html">Criar</a>
-                <a href="login.html">Login</a>
-		<a href="cadastro.html">Cadastro</a>
+                <a href="index">Página Inicial</a>
+                <a href="criar">Criar</a>
+                <a href="login">Login</a>
+				<a href="cadastro">Cadastro</a>
             </div>
         </div>
 </header>
@@ -39,8 +39,8 @@
 						<figure>
 							<img class="fotos"; id="foto1"; src="{{ url_for('static', filename='_imagens/eca1.png') }}" style="width:200px"/>
 							<figcaption id="foto-legenda"/>				
-							<a href="eca1.html">ECA - Estágio na Embraer</a>
-							<p class="local">Avenida Brigadeiro Faria Lima, 2170</p>
+							<a href="eca1.html">{{ results[0]['DESCRICAO'] }}</a>
+							<p class="local">{{ results[0]['ENDERECO'] }}</p>
 						</figure>
 					</div>		
 					<div class="itens">
