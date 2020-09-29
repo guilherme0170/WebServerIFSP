@@ -34,16 +34,19 @@
 	<section id="produtos">
 
 				<div class="linha1">
-
+					
+					{% for result in results %}
 					<div class="itens">
 						<figure>
-							<img class="fotos"; id="foto1"; src="{{ url_for('static', filename='_imagens/eca1.png') }}" style="width:200px"/>
-							<figcaption id="foto-legenda"/>				
-							<a href="eca1.html">{{ results[0]['DESCRICAO'] }}</a>
-							<p class="local">{{ results[0]['ENDERECO'] }}</p>
+							<img class="fotos"; src="{{ url_for('static', filename='_imagens/eca1.png') }}" style="width:200px"/>
+							<figcaption id="foto-legenda"/>
+							<a href="eca1.html">{{ result['TITULO'] }}</a>
+							<p class="local">{{ result['DESCRICAO'] }}</p>
+							
 						</figure>
-					</div>		
-					<div class="itens">
+					</div>
+					{% endfor %}		
+					<!-- <div class="itens">
 						<figure>
 							<img id="foto2"; src="{{ url_for('static', filename='_imagens/emec1.png') }}"; style="width:200px"/>
 							<figcaption id="foto-legenda"/>
@@ -59,7 +62,7 @@
 							<a>Estágio Técnico em Automação</a>
 							<p class="preco">Avenida dos Astronautas, 1311</p>					
 						</figure>
-					</div>
+					</div> -->
 				</div>
 		</section>
 		

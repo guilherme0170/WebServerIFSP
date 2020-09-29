@@ -34,14 +34,15 @@ div#menu {
     background: #129936;
     padding-top: 2px;
     padding-bottom: 2px;
-    width: 34px;
+    height: 34px;
   }
   
 div#menu a{
 	font-family: 'Arial';
     padding: 50px;
-    color: whitesmoke !important;
+    color: whitesmoke;
     text-align: center;
+    vertical-align: sub;
     vertical-align: -moz-middle-with-baseline;
 }
 
@@ -108,7 +109,7 @@ h1#nome-produto{
 a{  
    font-family: 'Arial';
    text-decoration: none;
-   color: white;
+   color: black;
 }
 
 p{
