@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>	IFSP SJC - Ofertas > Editar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+</head>
+<body onLoad="slide1()">
+	<div id="interface">
+			<header id="cabecalho">		
+        <div id=class>
+        <div id=cabecalho>
+            <h1>IFSP SJC - Ofertas</h1>
+            </div>
+            <div id="menu">
+                <a href="/">Página Inicial</a>
+                <a href="criar">Criar</a>
+                <a href="login">Login</a>
+				<a href="cadastro">Cadastro</a>
+				<a href="editar">Editar</a>
+            </div>
+        </div>
+		</header>
+		<article id="noticia-principal">
+			<header id="cabecalho-artigo">	
+			
+				<hgroup>
+				
+					<h3>
+					IFSP SJC - Ofertas &nbsp; >&nbsp
+					<a href="index.html">Pagina Inicial</a>	&nbsp >		
+					</h3>
+					
+				</hgroup>
+
+				{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div style="width: 50%; margin-left: auto; margin-right: auto;" class="alert alert-success alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                        <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>x</span>
+                    </button>
+                {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+				{% endwith %}
+				
+				<h1 id="nome-produto">Editar/Excluir</h1>
+				
+			<div class="linha1detalhes">	
+			
+				<div class="direitaLinha"> 
+					<table border="1">
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+						</tr>
+						{% for result in results %}
+							<tr>
+								<td>{{ result['ID_PROJ'] }}</td>
+								<td>{{ result['TITULO'] }}</td>
+								<td bgcolor="green" style="text-align: center;"><a href="/update/{{ result['ID_PROJ'] }}" class="button">Editar</a></td>
+								<td bgcolor="#9c0000" style="text-align: center;"><a href="/deletar/{{ result['ID_PROJ'] }}" class="button">Excluir</a></td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+			</div>	
+			</header>
+            </div>
+		<footer id="rodape">
+
+		</footer>
+	</div>
+</body>
+</html>

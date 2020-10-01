@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>	IFSP SJC - Ofertas > Modificar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
+	
+</head>
+<body onLoad="slide1()">
+	<div id="interface">
+			<header id="cabecalho">		
+        <div id=class>
+        <div id=cabecalho>
+            <h1>IFSP SJC - Ofertas</h1>
+            </div>
+            <div id="menu">
+                <a href="/">Página Inicial</a>
+                <a href="criar">Criar</a>
+                <a href="login">Login</a>
+				<a href="cadastro">Cadastro</a>
+				<a href="editar">Editar</a>
+            </div>
+        </div>
+		</header>
+		<article id="noticia-principal">
+			<header id="cabecalho-artigo">	
+			
+				<hgroup>
+				
+					<h3>
+					IFSP SJC - Ofertas &nbsp; >&nbsp
+					<a href="index.html">Pagina Inicial</a>	&nbsp >		
+					</h3>
+					
+				</hgroup>
+				<h1>Editar Projeto</h1>
+				
+			<div class="linha1detalhes">	
+				<form action="/update/{{ results[0]['ID_PROJ'] }}" method="POST">
+					<div class="esquerdaLinha">
+						<img id="logo" alt="Seu logo" width="300" height="300" />
+						<input type="file" onchange="document.getElementById('logo').src = window.URL.createObjectURL(this.files[0])" name="logo" id="logo" accept="image/png, image/jpeg">
+					</div>
+					
+					<div class="direitaLinha"> 
+						<label for="titulo">Titulo: </label> <input value="{{ results[0]['TITULO'] }}" type="text" id="titulo" name="titulo" size="100"><br><br>
+						<label for="salario">Salário: R$</label> <input value="{{ results[0]['SALARIO'] }}" type="text" id="salario" name="salario"><br><br>
+						<label for="endereco">Endereço: </label> <input value="{{ results[0]['ENDERECO'] }}" type="text" id="endereco" name="endereco" size="100"><br><br>
+						<label for="contato">Contato: </label> <input value="{{ results[0]['CONTATO'] }}" type="text" id="contato" name="contato" size="100"><br><br>
+						<label for="descricao">Descrição: </label><br> <textarea id="descricao" name="descricao" rows="10" cols="70">{{ results[0]['DESCRICAO'] }}</textarea><br><br>
+						<input type="submit" value="Modificar">
+					</div>
+				</form>
+			</div>	
+			</header>
+            </div>
+		<footer id="rodape">
+
+		</footer>
+	</div>
+</body>
+</html>

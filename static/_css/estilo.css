@@ -11,6 +11,30 @@
 	color: #606060;
 }
 
+table {
+    width: 50%; 
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+th, td {  
+    border: 1px solid black;  
+    padding: 8px;
+} 
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+} 
+
+th {
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    text-align: left; 
+    background-color: #195128;; 
+    color: white;
+}
+
 body {
 	font-family: 'Arial';
     margin: 0px;
@@ -39,11 +63,11 @@ div#menu {
   
 div#menu a{
 	font-family: 'Arial';
-    padding: 50px;
+    padding: 50px !important;
     color: whitesmoke;
-    text-align: center;
-    vertical-align: sub;
-    vertical-align: -moz-middle-with-baseline;
+    text-align: center !important;
+    vertical-align: sub !important;
+    vertical-align: -moz-middle-with-baseline !important;
 }
 
 div#menu a:hover{
@@ -107,9 +131,9 @@ h1#nome-produto{
 }
 
 a{  
-   font-family: 'Arial';
-   text-decoration: none;
-   color: black;
+   font-family: 'Arial' !important;
+   text-decoration: none !important;
+   color: black !important;
 }
 
 p{
