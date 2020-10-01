@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>	IFSP SJC - Ofertas > Oferta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='_css/estilo.css') }}">
+	
+</head>
+<body onLoad="slide1()">
+	<div id="interface">
+			<header id="cabecalho">		
+        <div id=class>
+        <div id=cabecalho>
+            <h1>IFSP SJC - Ofertas</h1>
+            </div>
+            <div id="menu">
+                <a href="/">Página Inicial</a>
+                <a href="/criar">Criar</a>
+                <a href="">Login</a>
+				<a href="">Cadastro</a>
+				<a href="/editar">Editar</a>
+            </div>
+        </div>
+		</header>
+		<article id="noticia-principal">
+			<header id="cabecalho-artigo">	
+			
+				<hgroup>
+				
+					<h3>
+					IFSP SJC - Ofertas &nbsp; >&nbsp
+					<a href="/">Página Inicial</a>	&nbsp >		
+					<a href="">Página do Proejto</a>
+					</h3>
+					
+				</hgroup>
+				<h1 id="nome-produto">{{ results[0]['TITULO'] }}</h1>
+				
+			<div class="linha1detalhes">	
+			
+				<div class="esquerdaLinha">
+					<img class="logo" src="/static/_imagens/{{ results[0]['IMAGEM'] }}"/>
+				</div>
+				
+				<div class="direitaLinha"> <h3> R$ {{ results[0]['SALARIO'] }} </h3>
+					<h3> {{ results[0]['ENDERECO'] }} </h3>
+					<h3> {{ results[0]['CONTATO'] }} </h3>
+					<p> {{ results[0]['ENDERECO'] }} </p>
+				</div>
+			</div>	
+			</header>
+            </div>
+		<footer id="rodape">
+
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,14 +1,42 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-@font-face {
-    font-family: 'Arial';
-    src: local('Arial'), local('ArialMT'),
-        url('ArialMT.woff2') format('woff2'),
-        url('ArialMT.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-	color: #606060;
+
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    box-sizing: border-box;
+}
+
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
 }
 
 table {
@@ -16,12 +44,17 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5;
+    box-shadow: 0px 0px 5px gray;
 } 
 
-th, td {  
-    border: 1px solid black;  
+td {    
     padding: 8px;
 } 
+
+tr:hover {
+    background-color: #d4d3d3 !important;
+}
 
 tr:nth-child(even){
     background-color: #f2f2f2;
@@ -30,18 +63,32 @@ tr:nth-child(even){
 th {
     padding-top: 12px; 
     padding-bottom: 12px; 
-    text-align: left; 
-    background-color: #195128;; 
+    background-color: #195128;;
     color: white;
 }
 
+.editar{
+    color: green;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.excluir{
+    color:tomato;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.excluir:hover, .editar:hover{
+    opacity: 1;
+}
+
 body {
-	font-family: 'Arial';
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     margin: 0px;
 }
 
 div#cabecalho{
-	font-family: 'Arial';
 	font-size: 20pt;
 	color: #f7f7f7;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
@@ -50,7 +97,6 @@ div#cabecalho{
 }
 
 div#menu {
-    font-family: 'Arial';
     font-size: 14pt;
     color: whitesmoke;
     text-decoration:none;
@@ -58,16 +104,15 @@ div#menu {
     background: #129936;
     padding-top: 2px;
     padding-bottom: 2px;
-    height: 34px;
+    height: 40px;
   }
   
 div#menu a{
-	font-family: 'Arial';
-    padding: 50px !important;
+    padding: 50px ;
     color: whitesmoke;
-    text-align: center !important;
-    vertical-align: sub !important;
-    vertical-align: -moz-middle-with-baseline !important;
+    text-align: center ;
+    vertical-align: sub ;
+    vertical-align: -moz-middle-with-baseline ;
 }
 
 div#menu a:hover{
@@ -78,64 +123,109 @@ div#produto{
     padding-top: 20px;
     flex: 30%;
     text-align: center;
-    font-family: 'Arial';
     font-size: 16pt;
     
 }
 div#class{
-	font-family: 'Arial';
     text-align: center;
     margin: 0
 }
 
 
 h1#nome-produto{
-	font-family: 'Arial';
 	text-align: center;
-	font-size: 36pt;
+    font-size: 36pt;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 }
 
+form{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+
+}
+
+
 .linha1{
-	display: flex;
-	justify-content: space-between;
+	/* display: flex;
+    justify-content: space-between; */
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 .linha2{
 	display: flex;
 	justify-content: space-between;
 }
 .itens {
-  background-color: #ffffff;
-  flex: 50%;
-  padding: 10px;
-  height: 300px;
-  border-width: medium;
-  border-style: solid;
-  border-color: #000000;
-
+  float: left;
+  width: 30%;
+  padding-top: 45px;
+  padding-left: 3%;
+  min-height: 400px;
+  min-width: 400px;
 }
 
+.tituloproj{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+figure{
+    background-color: #adf0bf;
+    border-color: #48AB62;
+    border-width: 1px;
+	border-style: solid;
+    padding: 10px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+figure:hover{
+    background-color: #a6cfb1;
+}
+
+.fotosindex{
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: flex;
+}
+
+.foto-legenda{
+    text-align: center;
+}
 
 .linha1detalhes{
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    justify-content: center;
 }
 
 .esquerdaLinha{
-	border: solid ;
-	flex: 45%;
+    width: 40%;
+    background-color: #adf0bf;
+    border-color: #48AB62;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 0px 5px gray;
 }
 
 .direitaLinha{
-	padding-left: 10pt;
-	flex: 45%;
+	padding-left: 100px;
+	width: 30%;
+}
+
+.logo{
+    width: 500px; 
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a{  
-   font-family: 'Arial' !important;
-   text-decoration: none !important;
-   color: black !important;
-}
-
-p{
-	font-family: 'Arial';
+   text-decoration: none ;
+   color: black;
 }

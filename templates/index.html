@@ -32,20 +32,21 @@
 		</h3>
 	</hgroup>
 </header>
+	<h1 id="nome-produto">PROJETOS</h1>
 	<section id="produtos">
 
-				<div class="linha1">
-					
+				<div class="linha1">					
 					{% for result in results %}
-					<div class="itens">
-						<figure>
-							<img class="fotos"; src="{{ url_for('static', filename='_imagens/eca1.png') }}" style="width:200px"/>
-							<figcaption id="foto-legenda"/>
-							<a href="eca1.html">{{ result['TITULO'] }}</a>
-							<p class="local">{{ result['DESCRICAO'] }}</p>
-							
-						</figure>
-					</div>
+						<a href="/projeto/{{ result['ID_PROJ'] }}">
+							<div class="itens">
+								<figure>
+									<img class="fotosindex" src="/static/_imagens/{{ result['IMAGEM'] }}" style="width:200px"/>
+									<figcaption class="foto-legenda"/>
+									<b><p class="tituloproj">{{ result['TITULO'] }}</p></b>
+									<p class="local">{{ result['DESCRICAO'] }}</p>							
+								</figure>
+							</div>
+						</a>
 					{% endfor %}
 				</div>
 		</section>

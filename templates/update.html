@@ -18,10 +18,10 @@
             </div>
             <div id="menu">
                 <a href="/">Página Inicial</a>
-                <a href="criar">Criar</a>
-                <a href="login">Login</a>
-				<a href="cadastro">Cadastro</a>
-				<a href="editar">Editar</a>
+                <a href="/criar">Criar</a>
+                <a href="/login">Login</a>
+				<a href="/cadastro">Cadastro</a>
+				<a href="/editar">Editar</a>
             </div>
         </div>
 		</header>
@@ -32,17 +32,19 @@
 				
 					<h3>
 					IFSP SJC - Ofertas &nbsp; >&nbsp
-					<a href="index.html">Pagina Inicial</a>	&nbsp >		
+					<a href="index.html">Pagina Inicial</a>	&nbsp >	
+					<a href="/editar">Editar/Excluir Projeto</a> &nbsp >
+					<a href="">Update</a>
 					</h3>
 					
 				</hgroup>
-				<h1>Editar Projeto</h1>
+				<h1 id="nome-produto">Editar Projeto</h1>
 				
 			<div class="linha1detalhes">	
-				<form action="/update/{{ results[0]['ID_PROJ'] }}" method="POST">
+				<form action="/update/{{ results[0]['ID_PROJ'] }}" method="POST" enctype="multipart/form-data">
 					<div class="esquerdaLinha">
-						<img id="logo" alt="Seu logo" width="300" height="300" />
-						<input type="file" onchange="document.getElementById('logo').src = window.URL.createObjectURL(this.files[0])" name="logo" id="logo" accept="image/png, image/jpeg">
+						<img class="logo" alt="Seu logo" id="imglogo" src="/static/_imagens/{{ results[0]['IMAGEM'] }}"/>
+						<input type="file" onchange="document.getElementById('imglogo').src = window.URL.createObjectURL(this.files[0])" name="logo" id="logo" accept="image/png, image/jpeg">
 					</div>
 					
 					<div class="direitaLinha"> 
